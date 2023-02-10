@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
 
 @Component({
-  selector: 'app-app',
+  selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterModule, HttpClientModule],
+  imports: [RouterModule],
   template: '<router-outlet></router-outlet>',
 })
 export class AppComponent {
