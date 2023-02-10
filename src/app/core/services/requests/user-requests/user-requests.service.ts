@@ -25,7 +25,7 @@ export class UserRequestsService {
     return this.http.post<ILoggedUser>(`${[this.usersEndpoint, this.authEndpoints.SIGN_IN].join('/')}`, { ...user, returnSecureToken: true });
   }
 
-  updateUser(updatedData: IUpdateUser, userId: string): Observable<ILoggedUser> {
+  updateUser(userId: string, updatedData: IUpdateUser): Observable<ILoggedUser> {
     return this.http.put<ILoggedUser>(`${[this.usersEndpoint, userId].join('/')}`, updatedData);
   }
 
