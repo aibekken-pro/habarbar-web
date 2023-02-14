@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IAd, IAdCreate, IAddLocation } from '@shared-lib';
+import { IAd, IAdCreate } from '@shared-lib';
 import { Observable } from 'rxjs';
 
 @Injectable({
