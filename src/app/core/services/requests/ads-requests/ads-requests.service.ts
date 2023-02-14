@@ -39,7 +39,7 @@ export class AdsRequestsService {
     return this.http.patch<string>(`${[this.adsEndpoint, id].join('/')}`, editData);
   }
 
-  public deleteAd(id: string): Observable<string>  {
+  public deleteAd(id: string): Observable<string> {
     return this.http.delete<string>(`${[this.adsEndpoint, id].join('/')}`);
   }
 
@@ -48,6 +48,6 @@ export class AdsRequestsService {
   }
 
   public getUserAds(userId: string): Observable<IAd[]> {
-    return this.http.get<IAd[]>(`${[this.adsEndpoint, this.userEndpoint, userId].join('/')}`)
+    return this.http.get<IAd[]>(`${[this.adsEndpoint, this.userEndpoint, userId].join('/')}`);
   }
 }
