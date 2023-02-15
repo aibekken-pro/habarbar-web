@@ -1,5 +1,9 @@
 name: Test app
-on: push
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+    types: [opened, edited, reopened, closed]
 jobs:
   test:
     runs-on: ubuntu-latest
