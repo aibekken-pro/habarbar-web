@@ -1,7 +1,25 @@
 <nz-layout>
-  <nz-header>
+  <nz-header nz-row nzJustify="space-between" nzAlign="middle">
+    <div nz-col>
+      <h1 nz-typography  nzType="warning">Habarabar<span nz-icon nzType="message" nzTheme="outline"></span>
+      </h1>
+    </div>
+    <div nz-col>
+      <button nz-button nzType="primary">Подать обьявление</button>
+    </div>
+    <div nz-space nzSize="large" nz-col>
+      <nz-radio-group *nzSpaceItem  [(ngModel)]="radioValue" nzButtonStyle="solid" name="lang">
+        <label nz-radio-button nzValue="kaz">kaz</label>
+        <label nz-radio-button nzValue="ru">ru</label>
+      </nz-radio-group>
+      <ng-container *nzSpaceItem>
+        <button nz-button nzType="primary"><span nz-icon nzType="login" nzTheme="outline"></span></button>
+        <button  nz-col *ngIf="false" nz-button nzType="primary"><span nz-icon nzType="user" nzTheme="outline"></span></button>
+      </ng-container>
+    </div>
   </nz-header>
-  <nz-content>
+  <nz-content class="content-container">
+    <app-search></app-search>
     <router-outlet></router-outlet>
   </nz-content>
   <nz-footer>©2023 Habarabar</nz-footer>
